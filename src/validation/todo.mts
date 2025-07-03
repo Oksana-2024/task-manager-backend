@@ -5,7 +5,7 @@ export const todoSchema = Joi.object({
     "string.max": "Title should have at most 20 characters",
     "string.empty": "Title is required",
   }),
-  description: Joi.string().trim().min(2).max(250).required().messages({
+  description: Joi.string().trim().max(250).messages({
     "string.max": "Description should have at most 250 characters",
     "string.empty": "Description is required",
   }),
